@@ -3,7 +3,7 @@ import requests
 import os
 import sys
 def main():
-    token = "2471eebe7393961a32b0e760ade074786639f60a4e7399f1838794c30c264c99"
+    token = "<your-ctfd-admin-token>"
     # Get users with content type json header
     r = requests.get(f"https://koth.isfcrclub.tech/api/v1/users", headers={"Authorization": f"Token {token}", "Content-Type": "application/json"})
     users = r.json()["data"]
@@ -30,7 +30,7 @@ def main():
         print("No King yet")
 
 def award(user_id):
-    token = "2471eebe7393961a32b0e760ade074786639f60a4e7399f1838794c30c264c99"
+     token = "<your-ctfd-admin-token>"
     # Create API Session
     s = requests.Session()
     s.headers.update({"Authorization": f"Token {token}"})
